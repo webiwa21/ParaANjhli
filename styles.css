@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(135deg, #e7070e 0%, #dacdc8 100%);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgb(230, 202, 202);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 2s;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #a36c67;
+    animation: fadeInDown 2s;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 2s;
+}
+
+.photo {
+    position: relative;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(135, 182, 204, 0.5);
+    color: rgb(31, 8, 8);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.quotes {
+    margin-bottom: 2rem;
+}
+
+.quote {
+    font-size: 1.2rem;
+    color: #5c2823;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    font-family: 'Great Vibes', cursive;
+}
+
+.quote:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.quote:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.quote:nth-child(3) {
+    animation-delay: 5s;
+}
+
+.quote:nth-child(4) {
+    animation-delay: 7s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.audio-button {
+    background: #ff6f61;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+    animation: fadeInUp 2s;
+}
+
+.audio-button:hover {
+    background: #ff4a3d;
+}
